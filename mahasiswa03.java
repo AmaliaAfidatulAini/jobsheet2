@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class mahasiswa03 {
 
         String nama;
@@ -23,15 +21,26 @@ public class mahasiswa03 {
         }
 
         String nilaiKinerja() {
-            if (ipk < 0.0 || ipk > 4.0 ){
+            if (ipk < 0.0 || ipk > 4.0) {
                 return "IPK tidak valid";
             }
             if (ipk >= 3.5) {
-            return "Kinerja sangat baik";
-        } else if (ipk >= 2.0) {
-            return "Kinerja cukup";
-        } else {
-            return "Kinerja kurang";
+                return "Kinerja sangat baik";
+            } else if (ipk >= 2.0) {
+                return "Kinerja cukup";
+            } else {
+                return "Kinerja kurang";
+            }
         }
-    }
+    
+        public mahasiswa03() {
+
+        }
+
+        public mahasiswa03(String nm, String nim, double ipk, String kls) {
+            nama = nm;
+            this.nim = nim;
+            this.ipk = ipk;
+            kelas = kls;
+        }
 }
